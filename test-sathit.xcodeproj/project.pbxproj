@@ -12,6 +12,7 @@
 		018349A9250B54AF00073D01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018349A7250B54AF00073D01 /* Main.storyboard */; };
 		018349AB250B54B000073D01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018349AA250B54B000073D01 /* Assets.xcassets */; };
 		018349AE250B54B000073D01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018349AC250B54B000073D01 /* LaunchScreen.storyboard */; };
+		AB63D4C528BD1BCC088455A6 /* Pods_test_sathit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC5582997564706349AC7CE /* Pods_test_sathit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		018349AA250B54B000073D01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		018349AD250B54B000073D01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		018349AF250B54B000073D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EC5582997564706349AC7CE /* Pods_test_sathit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_sathit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF4BE5FBF9A06764679BAAE /* Pods-test-sathit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-sathit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test-sathit/Pods-test-sathit.debug.xcconfig"; sourceTree = "<group>"; };
+		6604D560D5294580D7E2ABFE /* Pods-test-sathit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test-sathit.release.xcconfig"; path = "Pods/Target Support Files/Pods-test-sathit/Pods-test-sathit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB63D4C528BD1BCC088455A6 /* Pods_test_sathit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				018349A2250B54AF00073D01 /* test-sathit */,
 				018349A1250B54AF00073D01 /* Products */,
+				42AA3B83144E323E0A6F9E8A /* Pods */,
+				5AD8845C698C16E242F5D75A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "test-sathit";
 			sourceTree = "<group>";
 		};
+		42AA3B83144E323E0A6F9E8A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CF4BE5FBF9A06764679BAAE /* Pods-test-sathit.debug.xcconfig */,
+				6604D560D5294580D7E2ABFE /* Pods-test-sathit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5AD8845C698C16E242F5D75A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EC5582997564706349AC7CE /* Pods_test_sathit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 018349B2250B54B000073D01 /* Build configuration list for PBXNativeTarget "test-sathit" */;
 			buildPhases = (
+				5B89936342F9E88EEAA8E063 /* [CP] Check Pods Manifest.lock */,
 				0183499C250B54AF00073D01 /* Sources */,
 				0183499D250B54AF00073D01 /* Frameworks */,
 				0183499E250B54AF00073D01 /* Resources */,
+				EF6A3228A7FAF9C85232CD44 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B89936342F9E88EEAA8E063 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-test-sathit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF6A3228A7FAF9C85232CD44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-test-sathit/Pods-test-sathit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-test-sathit/Pods-test-sathit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0183499C250B54AF00073D01 /* Sources */ = {
@@ -278,6 +349,7 @@
 		};
 		018349B3250B54B000073D01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CF4BE5FBF9A06764679BAAE /* Pods-test-sathit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +368,7 @@
 		};
 		018349B4250B54B000073D01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6604D560D5294580D7E2ABFE /* Pods-test-sathit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
